@@ -1,0 +1,101 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 241, 43),
+    rgb(82, 227, 34)
+  );
+}
+.container {
+  text-align: center;
+  margin-top: 7cm;
+}
+.container p {
+  font-size: 70px;
+}
+.btn {
+  text-align: center;
+}
+.btn button {
+  padding: 12px;
+  width: 3cm;
+  background-color: lightblue;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+ol {
+  font-size: 20px;
+}
+ol li {
+  margin: 5px 10px;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 100px) and (max-width: 280px) {
+
+  .container p{
+    font-size: 35px;
+    
+  }
+    .btn button{
+    margin-top: 20px;
+  }
+}
+@media only screen and (min-width: 281px) and (max-width: 360px) {
+
+  .container p{
+    font-size: 30px;
+    
+  }
+  .container{
+    margin-top: 4cm;
+  }
+    .btn button{
+    margin-top: 60px;
+  }
+  ol{
+    margin-top: 3cm;
+  }
+}
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+
+  .container p{
+    font-size: 40px;
+    
+  }
+  .container{
+    margin-top: 4cm;
+  }
+    .btn button{
+    margin-top: 60px;
+  }
+  ol{
+    margin-top: 3cm;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+
+  .container p{
+    font-size: 48px;
+    
+  }
+  .container{
+    margin-top: 4cm;
+  }
+    .btn button{
+    margin-top: 60px;
+  }
+  ol{
+    margin-top: 3cm;
+  }
+}
+
+
+
+

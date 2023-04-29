@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <div class="box" id="sbox" onclick="manipulateSnake()">Snake</div>
+        <div class="box" id="gbox" onclick="manipulateGun()">Gun</div>
+        <div class="box" id="wbox" onclick="manipulateWater()">Water</div>
+      </div>
+    </div>
+    <div class="resultsec">
+      <div id="result"></div>
+      <div id="won"></div>
+    </div>
+    <div class="btn">
+      <button onclick="CA()">Clear All</button>
+    </div>
+
+    <div class="btn2">
+      <button id="btn" onclick="Quit()">Quit</button>
+    </div>
+
+    <script>
+      //    for computer 1 is Snake, 2 is Gun, 3 is Water
+
+      let result = document.getElementById("result");
+      let won = document.getElementById("won");
+
+      let random = Math.floor(Math.random() * 3 + 1);
+      let points = 0;
+      won.innerText = points;
+
+      const manipulateSnake = () => {
+        random = Math.floor(Math.random() * 3 + 1);
+
+        if (random === 1) {
+          result.innerText = "Snake vs Snake, Tie!";
+          won.innerText = "Score: " + points;
+          console.log("Tie");
+        } else if (random === 2) {
+          points--;
+          result.innerText = "Snake vs Gun, You Lose!";
+          won.innerText = "Score: " + points;
+
+          console.log("lose");
+        } else {
+          points++;
+          result.innerText = "Snake vs Water, You Won!";
+          won.innerText = "Score: " + points;
+          console.log("won");
+        }
+      };
+      const manipulateGun = () => {
+        random = Math.floor(Math.random() * 3 + 1);
+
+        if (random === 1) {
+          points++;
+          result.innerText = "Gun vs Snake, You Won!";
+          won.innerText = "Score: " + points;
+        } else if (random === 2) {
+          result.innerText = "Gun vs Gun, Tie!";
+          won.innerText = "Score: " + points;
+        } else {
+          points--;
+          result.innerText = "Gun vs Water, You Lose!";
+          won.innerText = "Score: " + points;
+        }
+      };
+
+      const manipulateWater = () => {
+        random = Math.floor(Math.random() * 3 + 1);
+
+        if (random === 1) {
+          points--;
+          result.innerText = "Water vs Snake, You Lose!";
+          won.innerText = "Score: " + points;
+        } else if (random === 2) {
+          points++;
+          result.innerText = "Water vs Gun, You Won!";
+          won.innerText = "Score: " + points;
+        } else {
+          result.innerText = "Water vs Water, Tie!";
+          won.innerText = "Score: " + points;
+        }
+      };
+      const CA = () => {
+        location.reload();
+      };
+
+      const Quit = () => {
+        location.href = "index.html";
+      };
+    </script>
+  </body>
+</html>

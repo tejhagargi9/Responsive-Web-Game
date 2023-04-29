@@ -1,0 +1,124 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 241, 43),
+    rgb(82, 227, 34)
+  );
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  margin-top: 6cm;
+}
+.container .box {
+  width: 4cm;
+  height: 4cm;
+  border-radius: 15px;
+  margin: 10px 20px;
+  border: 2px solid rgb(5, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.box:hover {
+  color: white;
+  background-color: black;
+  transform: perspective(300px) translate3d(0, 0, 20px);
+}
+
+.resultsec {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 0.5cm;
+}
+.resultsec #won {
+  margin-top: 1cm;
+}
+.btn {
+  text-align: center;
+  margin-top: 2cm;
+}
+.btn button {
+  width: 2cm;
+  height: 0.8cm;
+  background-color: lightskyblue;
+  color: black;
+  cursor: pointer;
+}
+.btn2 {
+  text-align: center;
+  margin-top: 0.2cm;
+}
+.btn2 button {
+  width: 2cm;
+  height: 0.8cm;
+  background-color: lightskyblue;
+  color: black;
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 100px) and (max-width: 280px) {
+  .container .box{
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .container{
+    margin-right: 9px;
+  }
+
+  
+}
+@media only screen and (min-width: 281px) and (max-width: 360px) {
+  .container .box{
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+  .container{
+    margin-right: 9px;
+  }
+
+  
+}
+@media only screen and (min-width: 361px) and (max-width: 400px) {
+  .container .box{
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+  .container{
+    margin-right: 9px;
+  }
+
+  
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .container .box{
+    width: 90px;
+    height: 90px;
+    font-size: 25px;
+  }
+  .container{
+    margin-right: 9px;
+  }
+
+  
+}
